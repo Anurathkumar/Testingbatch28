@@ -1,0 +1,462 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>21/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Dec 05 16:20:06 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>252 seconds (252170 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCases.Cart_Page_Test.verifyYourCarttextTest()'><b>verifyYourCarttextTest</b><br>Test class: testCases.Cart_Page_Test</td>
+<td><div><pre>java.lang.AssertionError: expected [Your Cart] but found [Your Car]
+	at testCases.Cart_Page_Test.verifyYourCarttextTest(Cart_Page_Test.java:53)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace415793386", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace415793386'><pre>java.lang.AssertionError: expected [Your Cart] but found [Your Car]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at testCases.Cart_Page_Test.verifyYourCarttextTest(Cart_Page_Test.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.Cart_Page_Test@33065d67</td></tr>
+<tr>
+<td title='testCases.Inventory_page_2_Test.verifyproductslabelTest()'><b>verifyproductslabelTest</b><br>Test class: testCases.Inventory_page_2_Test</td>
+<td><div><pre>java.lang.AssertionError: expected [Products] but found [Product]
+	at testCases.Inventory_page_2_Test.verifyproductslabelTest(Inventory_page_2_Test.java:33)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace549353786", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace549353786'><pre>java.lang.AssertionError: expected [Products] but found [Product]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at testCases.Inventory_page_2_Test.verifyproductslabelTest(Inventory_page_2_Test.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.Inventory_page_2_Test@7c137fd5</td></tr>
+<tr>
+<td title='testCases.LoginPageTest.verifytitleofApplicationTest()'><b>verifytitleofApplicationTest</b><br>Test class: testCases.LoginPageTest</td>
+<td><div><pre>java.lang.AssertionError: expected [Swag Lab] but found [Swag Labs]
+	at testCases.LoginPageTest.verifytitleofApplicationTest(LoginPageTest.java:27)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1310788094", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1310788094'><pre>java.lang.AssertionError: expected [Swag Lab] but found [Swag Labs]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at testCases.LoginPageTest.verifytitleofApplicationTest(LoginPageTest.java:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCases.LoginPageTest@231f98ef</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCases.Cart_Page_Test.Verify3linesTest()'><b>Verify3linesTest</b><br>Test class: testCases.Cart_Page_Test<br/>
+<a href="#Output-2133668271" onClick='toggleBox("Output-2133668271", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2133668271" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2133668271">
+Menu is displayed=true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.Cart_Page_Test@33065d67</td></tr>
+<tr>
+<td title='testCases.Cart_Page_Test.VerifyDiscriptionTest()'><b>VerifyDiscriptionTest</b><br>Test class: testCases.Cart_Page_Test<br/>
+<a href="#Output-1071550332" onClick='toggleBox("Output-1071550332", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1071550332" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1071550332">
+Lable of Description is =Description<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.Cart_Page_Test@33065d67</td></tr>
+<tr>
+<td title='testCases.Cart_Page_Test.verifyfootertextTest()'><b>verifyfootertextTest</b><br>Test class: testCases.Cart_Page_Test<br/>
+<a href="#Output-1600249858" onClick='toggleBox("Output-1600249858", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1600249858" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1600249858">
+Footer text of the inventory page = © 2023 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.Cart_Page_Test@33065d67</td></tr>
+<tr>
+<td title='testCases.Inventory_page_2_Test.verifyfootertextTest()'><b>verifyfootertextTest</b><br>Test class: testCases.Inventory_page_2_Test<br/>
+<a href="#Output-608392736" onClick='toggleBox("Output-608392736", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-608392736" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-608392736">
+Footer text of the inventory page = © 2023 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.Inventory_page_2_Test@7c137fd5</td></tr>
+<tr>
+<td title='testCases.Cart_Page_Test.verifyLinkdeinlogoTest()'><b>verifyLinkdeinlogoTest</b><br>Test class: testCases.Cart_Page_Test<br/>
+<a href="#Output-529621529" onClick='toggleBox("Output-529621529", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-529621529" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-529621529">
+visibility of LinkdeinLogo=true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.Cart_Page_Test@33065d67</td></tr>
+<tr>
+<td title='testCases.Inventory_page_2_Test.verifytwitterlogoTest()'><b>verifytwitterlogoTest</b><br>Test class: testCases.Inventory_page_2_Test<br/>
+<a href="#Output-2104539672" onClick='toggleBox("Output-2104539672", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2104539672" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2104539672">
+visibility of TwitterLogo=true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.Inventory_page_2_Test@7c137fd5</td></tr>
+<tr>
+<td title='testCases.Cart_Page_Test.RemoveProductfromCartTest()'><b>RemoveProductfromCartTest</b><br>Test class: testCases.Cart_Page_Test<br/>
+<a href="#Output-27313641" onClick='toggleBox("Output-27313641", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-27313641" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-27313641">
+No of Products removed into Cart= 1<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>testCases.Cart_Page_Test@33065d67</td></tr>
+<tr>
+<td title='testCases.Cart_Page_Test.verifyproductaddedintoCartTest()'><b>verifyproductaddedintoCartTest</b><br>Test class: testCases.Cart_Page_Test<br/>
+<a href="#Output-922145372" onClick='toggleBox("Output-922145372", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-922145372" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-922145372">
+No of Products added into Cart= 2<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>testCases.Cart_Page_Test@33065d67</td></tr>
+<tr>
+<td title='testCases.Cart_Page_Test.VerifyContinueShoppingbuttonTest()'><b>VerifyContinueShoppingbuttonTest</b><br>Test class: testCases.Cart_Page_Test<br/>
+<a href="#Output-1183745381" onClick='toggleBox("Output-1183745381", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1183745381" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1183745381">
+after clicking Continue shopping button =https://www.saucedemo.com/inventory.html<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.Cart_Page_Test@33065d67</td></tr>
+<tr>
+<td title='testCases.Inventory_page_2_Test.add6productsTest()'><b>add6productsTest</b><br>Test class: testCases.Inventory_page_2_Test<br/>
+<a href="#Output-12952277" onClick='toggleBox("Output-12952277", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-12952277" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-12952277">
+Total number of product added to cart = 6<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>testCases.Inventory_page_2_Test@7c137fd5</td></tr>
+<tr>
+<td title='testCases.Cart_Page_Test.verifyTwitterlogoTest()'><b>verifyTwitterlogoTest</b><br>Test class: testCases.Cart_Page_Test<br/>
+<a href="#Output-757099121" onClick='toggleBox("Output-757099121", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-757099121" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-757099121">
+Visibility of Twitter logo = true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.Cart_Page_Test@33065d67</td></tr>
+<tr>
+<td title='testCases.LoginPageTest.verifyURlofApplication()'><b>verifyURlofApplication</b><br>Test class: testCases.LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>testCases.LoginPageTest@231f98ef</td></tr>
+<tr>
+<td title='testCases.Inventory_page_2_Test.Verify3linesTest()'><b>Verify3linesTest</b><br>Test class: testCases.Inventory_page_2_Test<br/>
+<a href="#Output-1090885142" onClick='toggleBox("Output-1090885142", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1090885142" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1090885142">
+Menu is displayed=true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.Inventory_page_2_Test@7c137fd5</td></tr>
+<tr>
+<td title='testCases.Cart_Page_Test.VerifyQuantityTest()'><b>VerifyQuantityTest</b><br>Test class: testCases.Cart_Page_Test<br/>
+<a href="#Output-1420770489" onClick='toggleBox("Output-1420770489", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1420770489" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1420770489">
+Lable of Quantity is =QTY<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>testCases.Cart_Page_Test@33065d67</td></tr>
+<tr>
+<td title='testCases.LoginPageTest.loginToApplicationTest()'><b>loginToApplicationTest</b><br>Test class: testCases.LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>testCases.LoginPageTest@231f98ef</td></tr>
+<tr>
+<td title='testCases.Cart_Page_Test.VerifyCheckoutbuttonTest()'><b>VerifyCheckoutbuttonTest</b><br>Test class: testCases.Cart_Page_Test<br/>
+<a href="#Output-994584048" onClick='toggleBox("Output-994584048", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-994584048" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-994584048">
+after clicking Checkout button =https://www.saucedemo.com/checkout-step-one.html<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.Cart_Page_Test@33065d67</td></tr>
+<tr>
+<td title='testCases.Cart_Page_Test.verifyFacebooklogoTest()'><b>verifyFacebooklogoTest</b><br>Test class: testCases.Cart_Page_Test<br/>
+<a href="#Output-1646375227" onClick='toggleBox("Output-1646375227", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1646375227" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1646375227">
+visibility of FacebookLogo=true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.Cart_Page_Test@33065d67</td></tr>
+<tr>
+<td title='testCases.Inventory_page_2_Test.verifyLinkdeinlogoTest()'><b>verifyLinkdeinlogoTest</b><br>Test class: testCases.Inventory_page_2_Test<br/>
+<a href="#Output-93011633" onClick='toggleBox("Output-93011633", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-93011633" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-93011633">
+visibility of LinkdeinLogo=true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.Inventory_page_2_Test@7c137fd5</td></tr>
+<tr>
+<td title='testCases.Inventory_page_2_Test.verifyFacebooklogoTest()'><b>verifyFacebooklogoTest</b><br>Test class: testCases.Inventory_page_2_Test<br/>
+<a href="#Output-488322592" onClick='toggleBox("Output-488322592", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-488322592" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-488322592">
+visibility of FacebookLogo=true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.Inventory_page_2_Test@7c137fd5</td></tr>
+<tr>
+<td title='testCases.Cart_Page_Test.verifycarticonTest()'><b>verifycarticonTest</b><br>Test class: testCases.Cart_Page_Test<br/>
+<a href="#Output-1675471168" onClick='toggleBox("Output-1675471168", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1675471168" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1675471168">
+Cart page =https://www.saucedemo.com/cart.html<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>testCases.Cart_Page_Test@33065d67</td></tr>
+<tr>
+<td title='testCases.Cart_Page_Test.ProductpresentincartTest()'><b>ProductpresentincartTest</b><br>Test class: testCases.Cart_Page_Test<br/>
+<a href="#Output-365211514" onClick='toggleBox("Output-365211514", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-365211514" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-365211514">
+Product present in cart=true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>testCases.Cart_Page_Test@33065d67</td></tr>
+</table><p>
+</body>
+</html>

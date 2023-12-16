@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Full_Swaglab_TestCases_Suite">
+  <test thread-count="5" name="AllTestCases">
+    <classes>
+      <class name="testCases.Cart_Page_Test"/>
+      <class name="testCases.VerifyMultiple_Credentials_Test"/>
+      <class name="testCases.LoginPageTest"/>
+      <class name="testCases.Checkout_page_2_Test"/>
+      <class name="testCases.Complete_page_Test"/>
+      <class name="testCases.Inventory_page_2_Test"/>
+    </classes>
+  </test> <!-- AllTestCases -->
+</suite> <!-- Full_Swaglab_TestCases_Suite -->
