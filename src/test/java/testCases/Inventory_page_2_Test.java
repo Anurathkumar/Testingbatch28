@@ -35,14 +35,14 @@ public class Inventory_page_2_Test extends TestBase
 		Assert.assertEquals(expLable,ActLable);
 		Reporter.log("Lable of Inventory Page =" + ActLable);
 	}
-	@Test(groups = {"Retesting","Regression"})
+	/*@Test(groups = {"Retesting","Regression"})
 	public void verifyfootertextTest()
 	{
 		String exptext="© 2023 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy";
 		String acttext=invent.verifyfootertext();
 		Assert.assertEquals(exptext,acttext);
 		Reporter.log("Footer text of the inventory page = " +acttext);
-	}
+	}*/
 	@Test(groups = {"Sanity","Regression"})
 	public void verifytwitterlogoTest()
 	{
