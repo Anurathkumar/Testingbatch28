@@ -45,10 +45,10 @@
 <artifactId>extentreports</artifactId>
 <version>3.1.5</version>
 </dependency>
-<dependency>
-<groupId>Selenium_Framework</groupId>
-<artifactId>Selenium_Framework</artifactId>
-<version>0.0.1-SNAPSHOT</version>
-</dependency>
-</dependencies>
+  	<dependency>
+  		<groupId>Selenium_Framework</groupId>
+  		<artifactId>Selenium_Framework</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>
