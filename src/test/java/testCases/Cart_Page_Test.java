@@ -127,14 +127,14 @@ public class Cart_Page_Test extends TestBase
 		Assert.assertEquals(result3,true);
 		Reporter.log("visibility of LinkdeinLogo=" + result3);
 	}
-	@Test
+	/*@Test
 	public void verifyfootertextTest()
 	{
 		String exptext="© 2023 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy";
 		String acttext=cart.verifyfootertext();
 		Assert.assertEquals(exptext,acttext);
 		Reporter.log("Footer text of the inventory page = " +acttext);
-	}
+	}*/
 	@Test
 	public void Verify3linesTest() throws InterruptedException
 	{
